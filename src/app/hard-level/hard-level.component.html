@@ -1,10 +1,14 @@
 <div class="game-container">
     <div class="wrapper">
-        <div *ngFor="let card of cards; let i = index" (click)="handleClick(i)" [class.revealed]="revealed[i]">
+        <div *ngFor="let card of cards; let i = index" (click)="handleClick(i)" [class.revealed]="revealed[i]" class="card">
             <img *ngIf="revealed[i]" [src]=" 'assets/' + card + '.jpg'" alt="Card">
+            <img *ngIf="!revealed[i]" src="assets/card-back.jpg" alt="Card Back">
         </div>
     </div>
+    <!-- <div>Total moves {{moves}}, Total Miss{{misses}}</div> -->
+
     <div *ngIf="gameEndMessage" class="game-end-message">
         {{ gameEndMessage }}
     </div>
+    <div class="move">Moves = {{moves}}, Miss ={{misses}}</div>
 </div>

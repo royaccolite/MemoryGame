@@ -1,0 +1,8 @@
+.card {
+    background-image: url('../assets/card-back.jpg'); /* Adjust the path accordingly */
+    background-size: cover;
+}
+
+.card.revealed {
+    background-image: none;
+}

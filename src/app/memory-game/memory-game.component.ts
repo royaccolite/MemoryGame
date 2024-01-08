@@ -38,7 +38,9 @@ export class MemoryGameComponent implements OnInit {
   }
 
   generateCardImages(): string[] {
-    const images = ['sasuke', 'kakashi', 'naruto'];
+    const images = this.rows * this.columns === 12
+      ? ['sasuke', 'kakashi', 'naruto', 'hinata', 'madara', 'pain']
+      : ['sasuke', 'kakashi', 'naruto'];
     const pairs = images.concat(images);
     return this.shuffleArray(pairs);
   }
@@ -91,4 +93,8 @@ export class MemoryGameComponent implements OnInit {
       this.initializeGame();
     }
   }
+  getCardImage(card: string, isRevealed: boolean): string {
+    return isRevealed ? `assets/${card}.jpg` : 'assets/card-back.jpg';
+  }
+  
 }
