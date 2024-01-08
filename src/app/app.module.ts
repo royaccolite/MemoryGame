@@ -1,19 +1,19 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { GameComponent } from './game/game.component';
-import { CardComponent } from './card/card.component';
-import { BoardComponent } from './board/board.component';
-import { FormsModule } from '@angular/forms';
+import { MemoryGameComponent } from './memory-game/memory-game.component';
+import { HardLevelComponent } from './hard-level/hard-level.component';
+import { FireworksComponent } from './fireworks/fireworks.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GameComponent,
-    CardComponent,
-    BoardComponent
+    MemoryGameComponent,
+    HardLevelComponent,
+    FireworksComponent
   ],
   imports: [
     BrowserModule,

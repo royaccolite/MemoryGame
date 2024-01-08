@@ -1,0 +1,10 @@
+<div class="game-container">
+    <div class="wrapper">
+        <div *ngFor="let card of cards; let i = index" (click)="handleClick(i)" [class.revealed]="revealed[i]">
+            <img *ngIf="revealed[i]" [src]=" 'assets/' + card + '.jpg'" alt="Card">
+        </div>
+    </div>
+    <div *ngIf="gameEndMessage" class="game-end-message">
+        {{ gameEndMessage }}
+    </div>
+</div>
